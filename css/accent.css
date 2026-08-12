@@ -1,0 +1,179 @@
+/* =========================================================
+   繽紛明亮風 (Bright & Vibrant Pastel Palette)
+   ========================================================= */
+
+/* 1. 淺色模式 (Light Mode) - 繽紛明亮主色調 */
+:root,
+html[data-user-color-scheme='light'] {
+  /* 主 Accent Color：鮮艷櫻花粉 */
+  --color-primary: #FF6B95;
+  --color-primary-rgb: 255, 107, 149;
+  --color-primary-hover: #FF477E;
+
+  /* 繽紛輔助色系 (Pastel Accents) */
+  --color-secondary: #845EC2;      /* 浪漫紫 */
+  --color-cyan: #00C9A7;           /* 薄荷綠 */
+  --color-blue: #4D80E4;           /* 天空藍 */
+  --color-accent-gradient: linear-gradient(135deg, #FF6B95 0%, #9C65D7 100%);
+
+  /* 全局背景與卡片 (告別沉重的灰，改用輕盈暖白) */
+  --body-bg-color: #FAFAFD;         /* 帶微紫調的明亮亮白 */
+  --board-bg-color: #FFFFFF;        /* 文章主體純白 */
+  --navbar-bg-color: rgba(255, 255, 255, 0.85); /* 亮色半透明毛玻璃 */
+  --navbar-text-color: #2D3748;     /* 導覽列深色精緻文字 */
+  
+  --text-color: #2D3748;            /* 正文高對比深灰 */
+  --sec-text-color: #718096;        /* 次要文字 */
+}
+
+/* 2. 深色模式 (Dark Mode) - 高飽和霓虹繽紛 */
+html[data-user-color-scheme='dark'] {
+  --color-primary: #FF7FA5;
+  --color-primary-rgb: 255, 127, 165;
+  --color-primary-hover: #FF9BBB;
+
+  --color-secondary: #B388FF;
+  --color-accent-gradient: linear-gradient(135deg, #FF7FA5 0%, #B388FF 100%);
+
+  /* 深色背景：採用深邃星空藍紫，而非死板灰色 */
+  --body-bg-color: #0F172A;
+  --board-bg-color: #1E293B;
+  --navbar-bg-color: rgba(30, 41, 59, 0.85);
+  --navbar-text-color: #F1F5F9;
+
+  --text-color: #F1F5F9;
+  --sec-text-color: #94A3B8;
+}
+
+/* =========================================================
+   繽紛視覺與 UI 樣式覆蓋
+   ========================================================= */
+
+/* --- 1. 全局背景與卡片陰影優化 --- */
+body {
+  background-color: var(--body-bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+#board {
+  background-color: var(--board-bg-color) !important;
+  border-radius: 16px !important;   /* 增加大圓角提升現代感 */
+  box-shadow: 0 10px 30px rgba(156, 101, 215, 0.08) !important; /* 輕盈繽紛陰影 */
+}
+
+/* --- 2. 明亮透光 Navbar (毛玻璃效果) --- */
+.navbar {
+  background-color: var(--navbar-bg-color) !important;
+  backdrop-filter: blur(12px) !important; /* 啟用質感毛玻璃 */
+  -webkit-backdrop-filter: blur(12px) !important;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-item .nav-link,
+.navbar .navbar-brand {
+  color: var(--navbar-text-color) !important;
+  font-weight: 600;
+}
+
+.navbar .nav-item .nav-link:hover {
+  color: var(--color-primary) !important;
+}
+
+.navbar .dropdown-menu,
+.navbar-col {
+  background-color: var(--board-bg-color) !important;
+  border-radius: 12px;
+  border: none !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* --- 3. 繽紛漸層按鈕與互動元素 --- */
+
+/* 核心按鈕套用繽紛漸層 */
+.btn,
+.pagination .page-number.current,
+.post-prevnext .post-nav-button {
+  background: var(--color-accent-gradient) !important;
+  border: none !important;
+  color: #FFFFFF !important;
+  font-weight: 600;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(255, 107, 149, 0.3) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.btn:hover,
+.pagination .page-number:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 107, 149, 0.45) !important;
+}
+
+/* 連結 Hover 繽紛效果 */
+a {
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-primary-hover) !important;
+}
+
+.markdown-body a {
+  color: var(--color-primary) !important;
+  font-weight: 500;
+}
+
+.markdown-body a:hover {
+  color: var(--color-primary-hover) !important;
+  background-color: rgba(var(--color-primary-rgb), 0.15) !important;
+  border-radius: 4px;
+}
+
+/* --- 4. 繽紛彩色 Tag 標籤雲 --- */
+.tagcloud a {
+  border-radius: 20px !important;
+  padding: 4px 12px !important;
+  background-color: rgba(var(--color-primary-rgb), 0.1) !important;
+  transition: all 0.2s ease !important;
+}
+
+.tagcloud a:nth-child(3n+1) { color: #FF6B95 !important; }
+.tagcloud a:nth-child(3n+2) { color: #845EC2 !important; }
+.tagcloud a:nth-child(3n+3) { color: #00C9A7 !important; }
+
+.tagcloud a:hover {
+  background: var(--color-accent-gradient) !important;
+  color: #FFFFFF !important;
+  transform: scale(1.08);
+}
+
+/* --- 5. 滾動條與文字高亮 --- */
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary) !important;
+  border-radius: 10px;
+}
+
+::selection {
+  background-color: rgba(255, 107, 149, 0.3) !important;
+  color: var(--color-primary) !important;
+}
+
+/* --- 6. Banner / Slogan 質感灰色陰影 (清晰透亮，無彩色光暈) --- */
+.banner-text,
+.banner-text #subtitle,
+.banner-text .typed-cursor,
+.scroll-down-bar {
+  color: #FFFFFF !important;
+  /* 
+    第一層：擴散的深灰柔和陰影，提供足夠對比度
+    第二層：緊貼文字的微黑邊匡，確保背景圖即使非常白也能清晰辨識
+  */
+  text-shadow: 
+    0 3px 12px rgba(40, 40, 40, 0.5), 
+    0 1px 8px rgba(0, 0, 0, 0.6) !important;
+}
+
+.mt-3, .mt-1 {
+    /* text weight */
+    font-weight: 600 !important;
+}
