@@ -1,0 +1,204 @@
+favicon: /assets/favicon.png
+
+# https://fluid.ist/docs/guide/#%E5%AF%BC%E8%88%AA%E8%8F%9C%E5%8D%95
+navbar:
+  blog_title: 米歐大陸
+  menu:
+    - { key: 'home', link: '/', icon: 'iconfont icon-home-fill' }
+    - { key: 'tag', link: '/tags/', icon: 'iconfont icon-tags-fill' }
+    - { key: 'category', link: '/categories/', icon: 'iconfont icon-category-fill' }
+    - { key: 'archive', link: '/archives/', icon: 'iconfont icon-archive-fill' }
+    - { key: 'about', link: '/about/', icon: 'iconfont icon-user-fill', name: '我這一生如履薄冰，你說我能走到對岸嗎' }
+
+# https://fluid.ist/docs/guide/#%E6%87%92%E5%8A%A0%E8%BD%BD
+lazyload:
+  enable: true
+  loading_img: https://i.sstatic.net/kOnzy.gif
+  onlypost: false
+  offset_factor: 2
+
+
+language: zh-TW
+
+force_https: true
+
+open_graph:
+  enable: true
+
+scroll_to_top: 
+  enable: true
+
+index:
+  slogan:
+    enable: true
+    text: 676767676767
+    api:
+      enable: false
+      url: "https://v1.hitokoto.cn/"
+      method: "GET"
+      headers: {}
+      keys: ["hitokoto"]
+  post_url_target: _self
+  
+  banner_img: assets/default_image.png
+  # banner_img_height: 50
+
+  
+  banner_mask_alpha: 0.15
+
+  post_meta:
+    date: true
+    category: true
+    tag: true
+
+post:
+  banner_img: /assets/default_image.png
+  banner_img_height: 50
+  banner_mask_alpha: 0.15
+
+  default_index_img: assets/default_image.png
+
+# 路徑是從source開始算
+
+  meta:
+    author:  # 作者，优先根据 front-matter 里 author 字段，其次是 hexo 配置中 author 值
+      enable: false
+    date:  # 文章日期，优先根据 front-matter 里 date 字段，其次是 md 文件日期
+      enable: true
+      format: "dddd, MMMM Do YYYY, h:mm a"  # 格式参照 ISO-8601 日期格式化
+    wordcount:  # 字数统计
+      enable: true
+      format: "{} 字"  # 显示的文本，{}是数字的占位符（必须包含)，下同
+    min2read:  # 阅读时间
+      enable: true
+      format: "{} 分鐘"
+    views:  # 阅读次数
+      enable: false
+      source: "leancloud"  # 统计数据来源，可选：leancloud | busuanzi | openkounter   注意不蒜子会间歇抽风
+      format: "{} 次"
+
+
+  math:
+    enable: true
+    specific: false
+    engine: mathjax
+# specific: 建议开启。当为 true 时，只有在文章 front-matter (opens new window)里指定 math: true 才会在文章页启动公式转换，以便在页面不包含公式时提高加载速度。
+
+# 流程圖：應該用不到
+  mermaid:
+    enable: false
+    specific: false
+    options:
+
+tag:
+  tagcloud:
+    min_font: 15
+    max_font: 30
+    unit: px  # 字号单位
+    start_color: "#BBBBEE"
+    end_color: "#337ab7"
+  banner_img: /assets/default_image.png
+  banner_img_height: 50
+  banner_mask_alpha: 0.15
+
+category:
+  banner_img: /assets/default_image.png
+  banner_img_height: 50
+  banner_mask_alpha: 0.15
+
+
+
+about:
+  avatar: /assets/favicon.png #todo
+  name: "米歐大陸"
+  intro: "6767676767" # todo
+  banner_img: /assets/default_image.png
+  banner_img_height: 50
+  banner_mask_alpha: 0.15
+
+  icons:
+    # 一般超連結圖示 (會觸發標籤裡面的 href、hint 提示與 _blank 新頁面開啟)
+    - { class: 'iconfont icon-instagram-fill', link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', tip: 'Instagram' }
+    - { class: 'iconfont icon-twitter-fill', link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', tip: 'Twitter' }
+    - { class: 'iconfont icon-discord-fill', link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', tip: 'Discord' }
+
+    # 二維碼圖示 (會觸發標籤裡面的 qrcode 判斷，懸浮/點擊顯示圖片)
+    # - { class: 'iconfont icon-wechat-fill', qrcode: '/img/wechat_qr.png' }
+
+archive:
+  subtitle: 封存 67676767
+  banner_img: /assets/default_image.png
+  banner_img_height: 50
+  banner_mask_alpha: 0.15
+
+
+
+page:
+  banner_img: /assets/default_image.png
+  banner_img_height: 50
+  banner_mask_alpha: 0.15
+
+
+dark_mode:
+  enable: true
+  default: light
+
+
+# 指定自定义 css 文件路径，路径是相对 source 目录
+custom_css:
+  - /css/accent.css
+  - /css/scrollbar.css
+  - /css/indexin_hover.css
+  - /css/mac_codeblock.css
+
+
+# 沒用 因為fluid沒有expose 這些var
+# ----------------------------------------------------------------
+# Fluid 官方色彩配置 (取代 custom.css 寫法)
+# ----------------------------------------------------------------
+# color:
+#   # ---- 亮色模式 (Light Mode) ----
+#   body_bg_color: "#f8fafc"           # 全局背景
+#   text_color: "#3c4858"              # 主要文字
+#   sec_text_color: "#718096"          # 次要文字
+  
+#   post_text_color: "#2c3e50"
+#   post_heading_color: "#1a202c"
+#   post_link_color: "#2c3e50"
+  
+#   # Accent & 連結連動
+#   link_hover_color: "#E26F8D"        # Hover Accent
+#   link_hover_bg-color: "#FDE8ED"     # Hover 背景 (對應 rgba(241, 135, 163, 0.12))
+  
+#   # 按鈕與邊框
+#   button_bg_color: "#F187A3"         # 按鈕改為 Accent 色 (#F187A3)
+#   button_hover_bg_color: "#E26F8D"   # 按鈕 Hover 色
+  
+#   # 導覽列與板塊
+#   navbar_bg_color: "#2f4154"
+#   navbar_text_color: "#ffffff"
+#   subtitle_color: "#ffffff"          # Banner Subtitle 純白高亮
+#   board_color: "#ffffff"             # 文章主要板塊底色
+#   scrollbar_color: "#F187A3"         # 滾動條 Accent 化
+
+#   # ---- 暗色模式 (Dark Mode) ----
+#   body_bg_color_dark: "#181c27"
+#   text_color_dark: "#c4c6c9"
+#   sec_text_color_dark: "#a7a9ad"
+  
+#   post_text_color_dark: "#c4c6c9"
+#   post_heading_color_dark: "#c4c6c9"
+#   post_link_color_dark: "#c4c6c9"
+  
+#   # 暗色 Accent 連動 (對應 color-mix 算出的 #F49DB5 / #F7B5C6)
+#   link_hover_color_dark: "#F7B5C6"
+#   link_hover_bg_color_dark: "#3A2930"
+  
+#   button_bg_color_dark: "#F49DB5"
+#   button_hover_bg_color_dark: "#F7B5C6"
+  
+#   navbar_bg_color_dark: "#1f3144"
+#   navbar_text_color_dark: "#d0d0d0"
+#   subtitle_color_dark: "#ffffff"
+#   board_color_dark: "#252d38"
+#   scrollbar_color_dark: "#F49DB5"
