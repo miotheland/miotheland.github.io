@@ -8,7 +8,7 @@ navbar:
     - { key: 'tag', link: '/tags/', icon: 'iconfont icon-tags-fill' }
     - { key: 'category', link: '/categories/', icon: 'iconfont icon-category-fill' }
     - { key: 'archive', link: '/archives/', icon: 'iconfont icon-archive-fill' }
-    - { key: 'about', link: '/about/', icon: 'iconfont icon-user-fill', name: '我這一生如履薄冰，你說我能走到對岸嗎' }
+    - { key: 'about', link: '/about/', icon: 'iconfont icon-user-fill'} # , name: '我這一生如履薄冰，你說我能走到對岸嗎' }
 
 # https://fluid.ist/docs/guide/#%E6%87%92%E5%8A%A0%E8%BD%BD
 lazyload:
@@ -31,7 +31,7 @@ scroll_to_top:
 index:
   slogan:
     enable: true
-    text: 676767676767
+    text: 歡迎來到米歐大陸
     api:
       enable: false
       url: "https://v1.hitokoto.cn/"
@@ -111,22 +111,22 @@ category:
 about:
   avatar: /assets/favicon.png #todo
   name: "米歐大陸"
-  intro: "6767676767" # todo
+  intro:  # todo
   banner_img: /assets/default_image.png
   banner_img_height: 50
   banner_mask_alpha: 0.15
 
   icons:
     # 一般超連結圖示 (會觸發標籤裡面的 href、hint 提示與 _blank 新頁面開啟)
-    - { class: 'iconfont icon-instagram-fill', link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', tip: 'Instagram' }
-    - { class: 'iconfont icon-twitter-fill', link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', tip: 'Twitter' }
-    - { class: 'iconfont icon-discord-fill', link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', tip: 'Discord' }
+    - { class: 'iconfont icon-instagram-fill', link: 'https://www.instagram.com/miotiry_theland', tip: 'Instagram' }
+    - { class: 'fa-brands fa-square-threads', link: 'https://www.threads.com/@miotiry_theland', tip: 'Threads' }
+    # - { class: 'iconfont icon-discord-fill', link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', tip: 'Discord' }
 
     # 二維碼圖示 (會觸發標籤裡面的 qrcode 判斷，懸浮/點擊顯示圖片)
     # - { class: 'iconfont icon-wechat-fill', qrcode: '/img/wechat_qr.png' }
 
 archive:
-  subtitle: 封存 67676767
+  subtitle: 封存
   banner_img: /assets/default_image.png
   banner_img_height: 50
   banner_mask_alpha: 0.15
@@ -151,6 +151,7 @@ custom_css:
   - /css/indexing_hover.css
   - /css/mac_codeblock.css
 
+custom_html: '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">'
 
 # 沒用 因為fluid沒有expose 這些var
 # ----------------------------------------------------------------
