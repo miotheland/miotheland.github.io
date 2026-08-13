@@ -22,7 +22,7 @@ language: zh-TW
 
 force_https: true
 
-open_graph:
+open_graph: # todo
   enable: true
 
 scroll_to_top: 
@@ -148,7 +148,7 @@ dark_mode:
 custom_css:
   - /css/accent.css
   - /css/scrollbar.css
-  - /css/indexin_hover.css
+  - /css/indexing_hover.css
   - /css/mac_codeblock.css
 
 

@@ -2,47 +2,49 @@
    繽紛明亮風 (Bright & Vibrant Pastel Palette)
    ========================================================= */
 
-/* 1. 淺色模式 (Light Mode) - 繽紛明亮主色調 */
+/* 1. 淺色模式 (Light Mode) - 以暖棕 / 奶茶色調為基準，保持柔和而不刺眼 */
 :root,
 html[data-user-color-scheme='light'] {
-  /* 主 Accent Color：鮮艷櫻花粉 */
-  --color-primary: #FF6B95;
-  --color-primary-rgb: 255, 107, 149;
-  --color-primary-hover: #FF477E;
+  /* 主 Accent Color：溫和奶茶玫瑰 */
+  --color-primary: #C97A6B;
+  --color-primary-rgb: 201, 122, 107;
+  --color-primary-hover: #B7675A;
 
-  /* 繽紛輔助色系 (Pastel Accents) */
-  --color-secondary: #845EC2;      /* 浪漫紫 */
-  --color-cyan: #00C9A7;           /* 薄荷綠 */
-  --color-blue: #4D80E4;           /* 天空藍 */
-  --color-accent-gradient: linear-gradient(135deg, #FF6B95 0%, #9C65D7 100%);
+  /* 輔助色系：帶暖感的柔和紫、青、藍 */
+  --color-secondary: #8F6E9A;      /* 柔和薰衣草 */
+  --color-cyan: #7A9A88;           /* 柔和青苔綠 */
+  --color-blue: #7D8EB7;           /* 柔和鎮靜藍 */
+  --color-accent-gradient: linear-gradient(135deg, #D8917D 0%, #A57DBD 100%);
 
-  /* 全局背景與卡片 (告別沉重的灰，改用輕盈暖白) */
-  --body-bg-color: #FAFAFD;         /* 帶微紫調的明亮亮白 */
-  --board-bg-color: #FFFFFF;        /* 文章主體純白 */
-  --navbar-bg-color: rgba(255, 255, 255, 0.85); /* 亮色半透明毛玻璃 */
-  --navbar-text-color: #2D3748;     /* 導覽列深色精緻文字 */
+  /* 全局背景與卡片：延續奶茶棕與暖白的質感 */
+  --body-bg-color: #DAC9AC; /*#FAFAFD;         /* 帶微紫調的明亮亮白 */
+  --board-bg-color: #e6d4b5; /*#FFFFFF;        /* 文章主體純白 */
+  --navbar-bg-color: rgba(255, 255, 255, 0.8); /* 亮色半透明毛玻璃 */
+  --navbar-text-color: #3A2D29;     /* 導覽列深棕灰文字 */
   
-  --text-color: #2D3748;            /* 正文高對比深灰 */
-  --sec-text-color: #718096;        /* 次要文字 */
+  --text-color: #3A2D29;            /* 正文高對比深棕灰 */
+  --sec-text-color: #7A675E;        /* 次要文字 */
 }
 
-/* 2. 深色模式 (Dark Mode) - 高飽和霓虹繽紛 */
+/* 2. 深色模式 (Dark Mode) - 沿用暖棕 / 奶茶系調色，讓明暗版本和諧統一 */
 html[data-user-color-scheme='dark'] {
-  --color-primary: #FF7FA5;
-  --color-primary-rgb: 255, 127, 165;
-  --color-primary-hover: #FF9BBB;
+  --color-primary: #D88F7B;
+  --color-primary-rgb: 216, 143, 123;
+  --color-primary-hover: #E7A18D;
 
-  --color-secondary: #B388FF;
-  --color-accent-gradient: linear-gradient(135deg, #FF7FA5 0%, #B388FF 100%);
+  --color-secondary: #B290D8;
+  --color-cyan: #8FAE9B;
+  --color-blue: #A9B4D6;
+  --color-accent-gradient: linear-gradient(135deg, #D88F7B 0%, #B290D8 100%);
 
-  /* 深色背景：採用深邃星空藍紫，而非死板灰色 */
-  --body-bg-color: #0F172A;
-  --board-bg-color: #1E293B;
-  --navbar-bg-color: rgba(30, 41, 59, 0.85);
-  --navbar-text-color: #F1F5F9;
+  /* 深色背景：採用暖棕深沉而非冷藍黑 */
+  --body-bg-color: #2A221C;
+  --board-bg-color: #3A3129;
+  --navbar-bg-color: rgba(58, 49, 41, 0.82);
+  --navbar-text-color: #F7F0E7;
 
-  --text-color: #F1F5F9;
-  --sec-text-color: #94A3B8;
+  --text-color: #F7F0E7;
+  --sec-text-color: #D5C3A5;
 }
 
 /* =========================================================
@@ -99,14 +101,14 @@ body {
   color: #FFFFFF !important;
   font-weight: 600;
   border-radius: 8px !important;
-  box-shadow: 0 4px 12px rgba(255, 107, 149, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(201, 122, 107, 0.3) !important;
   transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 
 .btn:hover,
 .pagination .page-number:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(255, 107, 149, 0.45) !important;
+  box-shadow: 0 6px 18px rgba(201, 122, 107, 0.45) !important;
 }
 
 /* 連結 Hover 繽紛效果 */
@@ -137,9 +139,9 @@ a:hover {
   transition: all 0.2s ease !important;
 }
 
-.tagcloud a:nth-child(3n+1) { color: #FF6B95 !important; }
-.tagcloud a:nth-child(3n+2) { color: #845EC2 !important; }
-.tagcloud a:nth-child(3n+3) { color: #00C9A7 !important; }
+.tagcloud a:nth-child(3n+1) { color: #C97A6B !important; }
+.tagcloud a:nth-child(3n+2) { color: #8F6E9A !important; }
+.tagcloud a:nth-child(3n+3) { color: #7A9A88 !important; }
 
 .tagcloud a:hover {
   background: var(--color-accent-gradient) !important;
@@ -154,7 +156,7 @@ a:hover {
 }
 
 ::selection {
-  background-color: rgba(255, 107, 149, 0.3) !important;
+  background-color: rgba(201, 122, 107, 0.28) !important;
   color: var(--color-primary) !important;
 }
 
